@@ -2,11 +2,11 @@
     background: $green;
     color: #fff;
     border-radius: 3px;
-    padding: 20px;
+    padding: 10px;
     font-size: rem(14px);
     font-family: $font-primary-bold;
     display: flex;
-    line-height: 1.5;
+    line-height: 1.2;
     align-items: center;
     text-align: left;
     @media only screen and (max-width: 1024px) {
@@ -26,5 +26,9 @@
     }
     &--large {
         justify-content: center;
+    }
+    span{
+        font-family: $font-primary-light;
+        font-size: rem(14px);
     }
 }

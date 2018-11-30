@@ -33,9 +33,10 @@
       font-family: $font-primary-bold;
       li {
         padding: 0 25px;
+        font-family: $font-primary-light;
       }
       a{
-        font-size: 16px;
+        font-size: rem(16px);
       }
     }
   }
@@ -78,6 +79,7 @@
       }
       a {
         padding: 30px 20px;
+        font-family: $font-primary;
       }
     }
     .sub-menu {
@@ -97,11 +99,14 @@
         height: 60px;
         position: absolute;
         left: -30%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.35);
         z-index: -1;
       }
       li {
         font-size: 14px;
+        a{
+          font-family: $font-primary-light;
+        }
       }
     }
     .sub-menu-item, .menu-item{
