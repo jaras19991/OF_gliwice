@@ -1,0 +1,22 @@
+.c-index_calendar{
+  .o-index_button{
+    font-family: $font-primary-bold;
+    font-size: rem(14px);
+  }
+}
+.o-calendar_tools{
+  .o-button{
+    margin: 20px 20px 20px 0 !important;
+    @media screen and (max-width: 767px){
+      width: auto !important;
+    }
+    &.icon_clendar{
+      margin-left: 20px !important;
+    }
+  }
+  @media screen and (max-width: 767px){
+    &.is_flex .flex_to_right{
+      margin-left: initial;
+    }
+  }
+}

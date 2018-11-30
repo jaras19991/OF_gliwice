@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mug</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="../../assets/css/bundle.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+
+    <style>
+        body {
+            overflow: visible;
+        }
+
+        .views {
+            margin: 100px auto 200px;
+            width: 50%;
+        }
+
+        .views ul.link-list {
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+
+        .views ul.link-list li {
+            margin-bottom: 20px;
+        }
+
+        a.done {
+            color: rgb(8, 113, 41);
+        }
+
+        a.done::after {
+            content: " (gotowe)";
+        }
+
+        a.done.connected {
+            color: #0088c3;
+        }
+
+        a.done.connected::after {
+            content: " (gotowe) [PODPIĘTE]";
+        }
+
+        a.inProggress {
+            color: rgb(189, 187, 0);
+        }
+
+        a.inProggress::after {
+            content: " (w trakcie)";
+        }
+
+        a.todo {
+            color: rgb(189, 0, 0);
+        }
+
+        a.todo::after {
+            content: " (TODO)";
+        }
+
+        a.fail.todo::after {
+            content: " (fail)";
+        }
+
+        a.done.template::after {
+            content: " (do dokończenia na templatce)";
+        }
+    </style>
+
+    <div class="views">
+        <h3>Widoki:</h3>
+        <ul class="link-list">
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/home.html">Home</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/detal.html">Detal</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/edukacja_dla_szkol.html">Edukacja dla szkol</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/informacje_praktyczne.html">Informacje praktyczne</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/kalendarium_kalendarz.html">Kalendarium kalendarz</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/nasza_ksiegarnia.html">Nasza ksiegarnia</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/oddzial_wizerunkowa.html">Oddzial wizerunkowa</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/zbiory.html">Zbiory</a>
+            </li>
+            <li>
+                <a class="inProggress" href="/frontEnd/dev/zbiory_detal.html">Zbiory detal</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

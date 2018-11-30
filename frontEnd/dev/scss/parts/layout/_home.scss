@@ -1,0 +1,17 @@
+.homepage {
+    .header{
+        height: initial;
+    }
+    .content{
+        background-color: #fff;
+        @media only screen and (min-width: 1025px) {
+            margin-top: -150px
+        }
+    }
+    @media only screen and (min-width: 1025px) and (max-width: 1300px) {
+        .c-index_horizontal .o-index_item img {
+        height: 300px;
+        }
+    }
+}
+

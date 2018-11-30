@@ -1,0 +1,13 @@
+@function get-vw($target) {
+  $vw-context: ($max-breakpoint * .01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function rem($px, $base: $base-font-size) {
+  @return ($px / $base) * 1rem;
+}
+
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}

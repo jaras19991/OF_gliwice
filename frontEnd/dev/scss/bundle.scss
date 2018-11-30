@@ -1,0 +1,33 @@
+//ABSTRACT
+@import "parts/abstract/_functions.scss";
+@import "parts/abstract/_variables.scss";
+@import "parts/abstract/_mixins.scss";
+
+//BASE
+@import "parts/base/_colors.scss";
+@import "parts/base/fonts";
+@import "parts/base/_reset.scss";
+@import "parts/base/_default.scss";
+@import "parts/base/_typography.scss";
+@import "parts/base/_icon.scss";
+
+// //VENDOR
+//@import "parts/vendor/_jquery.datetimepicker.scss"; // brakuje pliku, ten kalendarz jest już wrzucony na stronę i nie najgorzej się spisuje, można go zostawić bo trochę za mało czasu na pisanie nowego, chyba że jest jakaś alternatywa
+
+
+//LAYOUT
+@import "parts/layout/_base.scss";
+@import "parts/layout/_nav.scss";
+@import "parts/layout/_header.scss";
+@import "parts/layout/_content.scss";
+@import "parts/layout/_footer.scss";
+@import "parts/layout/_index.scss";
+@import "parts/layout/_home.scss";
+@import "parts/layout/_content_page.scss";
+@import "parts/layout/_calendar.scss";
+@import "parts/layout/_shop.scss";
+
+// //COMPONENTS
+@import "parts/components/_c-slider.scss";
+@import "parts/components/_o-info-box.scss";
+@import "parts/components/_index_library.scss";

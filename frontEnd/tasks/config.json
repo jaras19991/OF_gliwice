@@ -1,0 +1,48 @@
+{
+  "root": {
+    "dev": "./dev",
+    "dist": "../"
+  },
+  "html": {
+    "dev": "html",
+    "dist": "./",
+    "parts": "templates",
+    "run": false
+  },
+  "css": {
+    "dev": "scss",
+    "dist": "assets/css",
+    "parts": "parts",
+    "extensions": "*.+(css|scss)",
+    "uncss": false
+  },
+  "js": {
+    "dev": "js",
+    "dist": "assets/js",
+    "parts": "modules",
+    "extensions": [".json", ".js"]
+  },
+  "img": {
+    "dev": "images/**/",
+    "dist": "assets/images",
+    "extensions": "*.+(jpg|jpeg|gif|png|svg)"
+  },
+  "fonts": {
+    "dev": "fonts",
+    "dist": "assets/fonts",
+    "extensions": "*.+(woff2|woff|eot|ttf|svg)"
+  },
+  "browserSync": {
+    "port": 8080,
+    "proxy": {
+      "target": "mug.local",
+      "publicPath": "http://localhost:8080/assets/js/",
+      "files": [
+        "../../app/Resources/views/*.html.twig",
+        "../../app/Resources/views/*/*.html.twig",
+        "dev/*.html"
+        
+      ]
+    }
+  }
+}

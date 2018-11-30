@@ -1,0 +1,208 @@
+.content_page{
+    .o-info-box--large{
+        width: 100%;
+        @media screen and (max-width: 1024px){
+            width: calc(100% + 30px);
+        }
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-top: 30px;
+        color: #000;
+        .o-button {
+            margin: 80px 0;
+        }
+    }
+    .left-column {
+        width: 300px;
+        margin-right: 50px;
+        .o-button {
+            margin: 0 0 30px;
+        }
+    }
+    .main-column {
+        width: calc(100% - 350px);
+        background: #fff;
+        padding: 30px;
+    }
+    .o-summary_column {
+        background: #f1f1f1;
+    }
+    .c-index.c-index_vertical{
+        grid-template-columns: repeat(3, 375px);
+    }
+    .c-index.c-index_horizontal {
+        grid-template-columns: repeat(2, calc(50% - 15px));
+        .o-index_item {
+            background: #fafafa;
+        }
+    }
+    .c-index_calednar{
+        .o-index_content span{
+            margin-top: 5px;
+        }
+    }
+    .o-content_info {
+        padding: 50px;
+        background: #fff;
+        span {
+            width: 100%;
+            display: block;
+            font-family: "Gotham-Book";
+            font-size: rem(16px);
+            &.small {
+                font-family: "Gotham-Medium";
+                font-size: rem(14px);
+            }
+        }
+        label {
+            font-family: "Gotham-Book";
+            font-size: rem(14px);
+        }
+        .medium_title{
+            font-family: "Gotham-Medium";
+            font-size: rem(14px);
+            margin: 0 0 15px;
+            &:first-child{
+            }
+        }
+        .filterGroup li{
+            margin: 15px 0;
+        }
+    }
+    
+    .o-summary_column {
+        padding: 30px;
+        font-size: rem(14px);
+    }
+    .margin-vertical {
+        margin: 20px 0;
+    }
+    .o-button {
+        display: inline-block;
+        text-align: center;
+        padding: 15px 30px;
+        font-size: rem(14px);
+    }
+    .o-back, .o-more{
+        display: block;
+        font-family: "Gotham-Book";
+        font-size: rem(12px);
+    }
+    .o-back{
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f3f3f3;
+    }
+    .o-more{
+        margin-top: 25px;
+        padding-top: 25px;
+        border-top: 1px solid #f3f3f3;
+    }
+    @media screen and (max-width: 767px){
+
+        .left-column {
+            width: 100%;
+            margin-right: 0px;
+            padding: 0 15px;
+            background: #fff;
+        }
+
+
+        .content .o-button {
+            width: 100%;
+        }
+
+        .main-column {
+            width: 100%;
+            padding: 15px;
+        }
+        .o-content_info {
+            grid-template-columns: 1fr;
+            padding: 30px 0;
+        }
+    }
+
+
+    @media screen and (max-width: 1024px){
+        .content {
+            margin-top: 0px;
+        }
+        .c-index .o-index_item .o-hovered_title{
+            display: block;
+        }
+        .column_text_2 {
+            column-count: 1;
+        }
+        .main-column{
+            width: 100%;
+        }
+        .left-column {
+            width: 100%;
+            margin-right: 0px;
+            .o-button {
+                margin: 0 auto 30px;
+            }
+        }
+        .o-summary_column {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1024px){
+        .c-index .o-index_big_tile{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    @media only screen and (min-width: 1025px) and (max-width: 1300px) {
+        .c-index.c-index_vertical {
+            grid-template-columns: repeat(3, calc(33% - 8px));
+            grid-gap: 15px;
+        }
+        .c-index.c-index_horizontal {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+
+    @media only screen and (max-width: 1600px) and (min-width: 1301px) {
+        .c-index {
+            grid-template-columns: repeat(3, 320px);
+            &_horizontal{
+                .o-index_content {
+                    padding: 15px;
+                    h3 {
+                        margin: 0.625rem 0;
+                    }
+                }
+                .o-index_item {
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        height: 320px;
+                    }
+                }
+                p.date {
+                    position: relative;
+                    bottom: 0px;
+                    margin: 10px 0;
+                }
+                p {
+                    -webkit-line-clamp: 3;
+                    max-height: 54px;
+                }
+                a{
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

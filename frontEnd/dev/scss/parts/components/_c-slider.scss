@@ -1,0 +1,32 @@
+.c-slider {
+    height: 900px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;    
+    margin-top: 90px;
+    .c-slider-item {
+        height: 900px;
+        background-size: 100% auto;
+    }
+    .c-slider-content {
+        color: #fff;
+        position: absolute;
+        top: 400px;
+        left: 250px;
+        width: 300px;
+        h2 {
+            color: #fff;
+        }
+        .has_line:after{
+            border-color: #fff;
+        }
+    }
+    .c-slider-bar {
+        position: absolute;
+        top: 45%;
+        font-size: rem(80px);
+        right: 150px;
+    }
+}
+
+
+

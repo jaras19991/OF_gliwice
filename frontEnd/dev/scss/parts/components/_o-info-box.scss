@@ -1,0 +1,30 @@
+.o-info-box{
+    background: $green;
+    color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: rem(14px);
+    font-family: $font-primary-bold;
+    display: flex;
+    line-height: 1.5;
+    align-items: center;
+    text-align: left;
+    @media only screen and (max-width: 1024px) {
+        &--large {
+            width: calc(100% + 15px);
+            margin: -15px 0 0 -15px;
+            padding: 20px 30px;
+        }
+    }
+    &:before {
+        content: "\e902";
+        font-family: "icomoon";
+        margin-right: 20px;
+    }
+    strong{
+      font-family: $font-primary-bold;
+    }
+    &--large {
+        justify-content: center;
+    }
+}

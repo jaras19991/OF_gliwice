@@ -1,0 +1,140 @@
+footer {
+    background: #000;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    position: relative;
+    * {
+        color: #fff;
+    }
+    .row {
+        display: flex;  
+        font-size: rem(14px);
+        font-family: $font-primary-bold;
+        &>* {
+            flex: 1 1;
+        }
+        @media only screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 0 15px;
+        }
+    }
+    .c-content_container {
+        padding-top: 1px;
+        @media only screen and (min-width: 768px) and (max-width: 1340px) {
+            width: 100%;
+            padding: 1px 10px;
+        }
+    }
+}
+.o-copyright {
+    display: flex;
+    padding: 60px 0;
+    font-family: $font-primary-bold;
+    font-size: rem(14px);
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+    @media only screen and (min-width: 768px) {
+        .copy_r {
+            margin-left: auto;
+        }
+    }
+}
+.o-newsletter {
+    padding: 30px 50px;
+    background: #222;
+    border-radius: 3px;
+    margin: 80px 0;
+    #newsletter {
+        display: flex;
+        align-items: center;
+        & > *{
+            margin: 0 10px;
+        }
+    }
+    #news_email {
+        width: 400px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $gray_light_4;
+        height: 40px;
+        font-family: $font-primary-bold;
+        font-size: rem(14px);
+    }
+    .accept_reg_checkbox {
+        display: flex;
+        align-items: center;
+    }
+    [type="checkbox"] {
+        height: 20px;
+        width: 20px;
+    }
+    [type="submit"] {
+        color: #000;
+        background: #fff;
+        border: 0px;
+        padding: 20px 100px;
+        border-radius: 3px;
+        font-family: $font-primary-bold;
+        font-size: rem(16px);
+    }
+    .accept {
+        color: $gray_light_4;
+        font-size: rem(12px);
+        margin-left: 0px !important;
+        font-family: $font-primary-bold;
+    }
+    .info_label {
+        font-size: rem(16px);
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .c-content_container {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .o-newsletter #newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .o-newsletter {
+        margin: 30px 0;
+        padding: 30px 15px;
+    }
+    
+    .o-newsletter #newsletter > * {
+        margin: 15px 0;
+        max-width: 100%;
+    }
+}
+
+
+
+    
+@media only screen and (min-width: 1390px) {
+    footer{
+        &:after, &:before {
+            content: " ";
+            position: absolute;
+            top: 30px;
+            background: #fff;
+            right: 30px;
+        }
+        &:after{
+            width: 40px;
+            height: 100px;
+        }
+        &:before{
+            width: 100px;
+            height: 40px;
+        }
+    }
+}
