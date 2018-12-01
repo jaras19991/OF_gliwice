@@ -45,10 +45,10 @@ export const c_slider = () => {
 
         currentSlide();
 
-    document.querySelector('.c-slider-arrow').addEventListener('click', function() {
+    document.querySelector('.c-slider-arrow_right').addEventListener('click', function() {
         next();
     }, false);
-    // document.querySelector('#previous').addEventListener('click', function() {
-    //     prev();
-    // }, false);
+    document.querySelector('.c-slider-arrow_left').addEventListener('click', function() {
+        prev();
+    }, false);
 };

@@ -10,6 +10,8 @@
         height: calc(100vh - 90px);
         width: 100%;
         background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
         position: absolute;
         clear: both;
         top: 0;
@@ -19,6 +21,10 @@
         margin: 0 auto;
         opacity: 0!important;
         overflow: hidden;
+        
+    @media only screen and (max-width: 767px) {
+        background-size: auto 100%;
+    }
         &.slideActive {
             z-index: 2;
             opacity: 1!important;
@@ -31,6 +37,12 @@
         bottom: 280px;
         left: calc(50% - 615px);
         width: 615px;
+        
+        @media only screen and (max-width: 767px) {
+            bottom: 100px;
+            left: 30px;
+            width: calc(100% - 60px);
+        }
         h2 {
             color: #fff;
             font-size: rem(36px);
@@ -58,31 +70,88 @@
         color: #fff;
         font-family: "Gotham-Light";    
         z-index: 3;
+        
+        @media only screen and (max-width: 767px) {
+            top: initial;
+            bottom: 10px;
+            width: 100%;
+            right: 0px;
+            padding: 30px;
+        }
         .c-slider-arrow{
 
-            &:after, &:before{
+            &_right:after, &_right:before, &_left:after, &_left:before{
                 content: " ";
                 position: absolute;
-                top: 10px;
-                right: 10px;
                 background-color: #fff;
-                @media only screen and (max-width: 767px) {
-                  top: 15px;
-                  right: 15px;
-                }
-              }
-              &:before{
                 width: 15px;
                 height: 50px;
-                transform: rotate(45deg);
-                right: -55px;
-                top: 18px;
+                cursor: pointer;
+                @media only screen and (max-width: 767px) {
+                    width: 10px;
+                    height: 35px;
+                }
               }
-              &:after{
-                width: 50px;
-                height: 15px;
-                transform: rotate(45deg);
-                right: -72px;
+              &_left{
+                  display: block;
+                @media only screen and (min-width: 768px) {
+                    display:none;
+                }
+                &:before{
+                  transform: rotate(45deg);
+                  right: -55px;
+                  top: 18px;
+                }
+                &:after{
+                  transform: rotate(45deg);
+                  right: -72px;
+                  top: 10px;
+                }
+                @media only screen and (max-width: 767px) {
+                    &:before {
+                        right:100px;
+                        top: 40px;
+                        transform: rotate(-45deg);
+                    }
+                    
+                    &:after {
+                        right: 100px;
+                        top: 22px;
+                        transform: rotate(45deg);
+                    }
+                }
+              }
+              &_right{
+                &:before{
+                  width: 15px;
+                  height: 50px;
+                  transform: rotate(45deg);
+                  right: -55px;
+                  top: 18px;
+                }
+                &:after{
+                  width: 50px;
+                  height: 15px;
+                  transform: rotate(45deg);
+                  right: -72px;
+                  top: 10px;
+                }
+                @media only screen and (max-width: 767px) {
+                    &:before {
+                        right: 40px;
+                        top: 40px;
+                        width: 10px;
+                        height: 35px;
+                    }
+                    
+                    &:after {
+                        width: 10px;
+                        height: 35px;
+                        right: 40px;
+                        top: 22px;
+                        transform: rotate(-45deg);
+                    }
+                }
               }
         }
     }
