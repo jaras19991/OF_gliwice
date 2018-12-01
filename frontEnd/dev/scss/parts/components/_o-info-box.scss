@@ -1,6 +1,6 @@
 .o-info-box{
-    background: $green;
-    color: #fff;
+    background: $light_green;
+    color: $green;
     border-radius: 3px;
     padding: 10px;
     font-size: rem(14px);
@@ -19,7 +19,7 @@
     &:before {
         content: "\e902";
         font-family: "icomoon";
-        margin-right: 20px;
+        margin: 0 15px 0 5px;
     }
     strong{
       font-family: $font-primary-bold;

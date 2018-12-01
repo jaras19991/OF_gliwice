@@ -2,7 +2,7 @@
   overflow-x: hidden;
   position: relative;
   height: 90px;
-  @media only screen and (max-width: 1024px){
+  @media only screen and (max-width: 767px){
     height: 70px;
   }
 }
@@ -63,7 +63,7 @@
     height: 90px;
     align-items: center;
     li {
-      font-size: 18px;
+      font-size: rem(18px);
       text-align: center;
       display: flex;
       color: #a8a8a8;
@@ -99,11 +99,11 @@
         height: 60px;
         position: absolute;
         left: -30%;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.6);
         z-index: -1;
       }
       li {
-        font-size: 14px;
+        font-size: rem(14px);
         a{
           font-family: $font-primary-light;
         }
@@ -127,7 +127,7 @@
       display: block;
     }
   }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  @media only screen and (min-width: 767px) and (max-width: 1024px) {
     .o-searchForm{
       position: absolute;
       top: 7px;
@@ -135,14 +135,14 @@
       text-align: right;
       .icon-search {
         right: 0px;
-        font-size: 20px;
+        font-size: rem(20px);
       }
       #searchWord {
         display: none;
       }
     }
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 767px) {
       height: auto;
       padding-bottom: 0px;
       width: 100%;
@@ -203,7 +203,7 @@
             width: 33%;
           }
           i{
-            font-size: 18px;
+            font-size: rem(18px);
           }
         }
         .o-langs{
@@ -223,7 +223,7 @@
           background: #222;
           padding: 0 15px 0 50px;
           font-family: $font-primary-bold;
-          font-size: 14px;
+          font-size: rem(14px);
           color: #fff;
         }
         #searchForm {
@@ -245,7 +245,7 @@
           position: absolute;
           left: 20px;
           padding: 15px;
-          font-size: 16px;
+          font-size: rem(16px);
         }
       }
       .c-main-menu{
@@ -257,7 +257,7 @@
           align-items: center;
         }
         .menu-item {
-          font-size: 16px;
+          font-size: rem(16px);
           a {
             padding: 15px 30px;
             width: 100%;
@@ -282,7 +282,7 @@
             font-weight: normal;
             font-variant: normal;
             text-transform: none;
-            font-size: 8px;
+            font-size: rem(8px);
             line-height: 1;
             -webkit-font-smoothing: antialiased;
             position: absolute;
@@ -338,7 +338,7 @@
     }
   }
 }
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width: 769px){
   .topbar{
     position: fixed;
   }
@@ -347,7 +347,7 @@
     text-align: center;
   }
 }
-  @media only screen and (min-width: 1025px) and (max-width: 1500px) {
+  @media only screen and (min-width: 769px) and (max-width: 1500px) {
     .c-main-logo{
       margin-left: 30px;
     }
@@ -357,12 +357,12 @@
          padding: 0 10px;
         }
         a {
-          font-size: 12px;
+          font-size: rem(12px);
         }
       }
     }
     .c-main-menu li {
-      font-size: 14px;
+      font-size: rem(14px);
     }
     .o-searchForm{
       width: 60px;
@@ -378,9 +378,11 @@
   text-shadow: 0px 0px 2px #000;
   position: absolute;
   text-align: center;
-  bottom: 50px;
-  left: 50px;
-  font-size: 22px;
+  top: 50vh;
+  left: 60px;
+  color: #fff;
+  font-size: rem(22px);
+  z-index: 1;
   li{
     margin: 50px 0;
   }

@@ -1,6 +1,5 @@
 import $ from 'jquery';
 export const menusAction = () => {
-    console.log(444);
     
   var currentPath = '/';
 
