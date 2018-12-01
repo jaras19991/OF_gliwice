@@ -40,5 +40,7 @@ export const c_gradient = () => {
   };
   })();
   var scroller = new Scroller();
-  scroller.init();
+  if(!!document.querySelector('.homepage .c-slider-overlay')){
+    scroller.init();
+  }
 };

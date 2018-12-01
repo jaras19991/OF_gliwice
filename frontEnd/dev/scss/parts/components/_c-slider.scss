@@ -181,4 +181,39 @@
             margin-top: -5px;
         }
     }
+    &-article{
+        height: auto;
+        @media only screen and (max-width: 767px) {
+            margin-top: 0;
+            width: 100vw;
+            margin-left: -15px;
+        }
+        .c-slider-item {
+            height: auto;
+            
+            &.slideActive {
+                position: relative;
+            }
+        }
+        .c-slider-bar {
+            top: initial;
+            bottom: 50px;
+            @media only screen and (max-width: 767px) {
+                bottom: 0;
+                padding: 20px;
+            }
+        }
+        .c-slider-content {
+            left: 50px;
+            bottom: 50px;
+            @media only screen and (max-width: 767px) {
+                left: 20px;
+                bottom: 100px;
+            }
+        }
+        .c-slider-img img{
+            width: 100%;
+
+        }
+    }
 }
