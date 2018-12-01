@@ -1,8 +1,6 @@
 .content_page{
     .o-info-box--large{
         width: 100%;
-        padding: 18px;
-        line-height: 1.2;
         @media screen and (max-width: 1024px){
             width: calc(100% + 30px);
         }

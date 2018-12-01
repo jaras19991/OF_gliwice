@@ -26,6 +26,8 @@
     }
     &--large {
         justify-content: center;
+        padding: 18px;
+        line-height: 1.2;
     }
     span{
         font-family: $font-primary-light;
