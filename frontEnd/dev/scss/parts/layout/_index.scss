@@ -4,7 +4,7 @@
   grid-gap: 30px;
   position: relative;
   z-index: 1;
-  margin-bottom: 60px;
+  background: red;
   @media only screen and (max-width: 767px) {
     flex-wrap: wrap;
     display: flex;
@@ -40,6 +40,16 @@
       font-size: rem(12px);
       &:before {
           margin-right: 5px;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      span{
+        font-size: rem(11px);
+      }
+    }
+    @media only screen and (min-width: 1300px) {
+      span{
+        font-size: rem(16px);
       }
     }
   }
@@ -221,7 +231,7 @@
       grid-column-start: 1;
       grid-column-end: 3;
       text-align: center;    
-      margin: 90px 0;
+      margin: 30px 0 60px 0;
       span{
         transition: all 0.3s;
         &:hover{
@@ -443,8 +453,14 @@
     }
     &_horizontal {
       grid-template-columns: repeat(2, 468px);
-      & > * {
-        margin-bottom: 30px;
+      // & > * {
+      //   margin-bottom: 30px;
+      // }
+      .o-index_content{
+        padding: 20px;
+        h3{
+          line-height: 24px;
+        }
       }
       .o-index_big_tile {
         p.date {
@@ -454,6 +470,9 @@
         h3 {
           margin: 20px 0;
         }
+      }
+      .o-index_item{
+        height: 360px;
       }
     }
     .o-index_item .o-hovered_title {
