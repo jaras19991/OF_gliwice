@@ -1,44 +1,54 @@
 export const c_slider = () => {
-    
-  var viewportHeight = document.body.clientHeight
-  function Scroller() {
-    this.latestKnownScrollY = 0;
-    this.ticking = false;
-  }
-  Scroller.prototype = {
-  init: function() {
-      window.addEventListener('scroll', this.onScroll.bind(this), false);
-  },
-  onScroll: function() {
-      this.latestKnownScrollY = window.pageYOffset;
-      this.requestTick();
-  },
-  requestTick: function() {
-      if (!this.ticking) {
-          window.requestAnimFrame(this.update.bind(this));
-      }
-      this.ticking = true;
-  },
-  update: function() {
-      var currentScrollY = this.latestKnownScrollY;
-      this.ticking = false;
-      var bgOverlay = currentScrollY * 1.7;
-      var bgOpacity = currentScrollY * 2;
-      var bgOverlayTransform = 'translateY(-' + bgOverlay + 'px)';
-      var bgOpacityTransform = 1 - bgOpacity / viewportHeight;
-      var $heroBG =  document.querySelector('.homepage .c-slider-item')
-      var $heroOverlay =  document.querySelector('.homepage .c-slider-overlay')
-      $heroBG.style.opacity = bgOpacityTransform
-      
-      $heroOverlay.style.transform = bgOverlayTransform
-      
-  }
-  };
-                  window.requestAnimFrame = (function() {
-  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
-      window.setTimeout(callback, 1000 / 60);
-  };
-  })();
-  var scroller = new Scroller();
-  scroller.init();
+    var slide = 0,
+    slides = document.querySelectorAll('.c-slider-item'),
+    numSlides = slides.length,
+    counter_length = document.querySelector('.c-slider-counter_length');
+         counter_length.innerHTML = numSlides;
+
+    var currentSlide = function() {
+      var itemToShow = Math.abs(slide % numSlides);
+      [].forEach.call(slides, function(el) {
+        el.classList.remove('slideActive')
+      });
+      slides[itemToShow].classList.add('slideActive');
+      countProgress(itemToShow);
+      resetInterval();
+    },
+    next = function() {
+      slide++;
+      currentSlide();
+    },
+    prev = function() {
+      slide--;
+      currentSlide();
+    },
+    countProgress = function(actual) {
+      var elm = document.querySelector('.c-slider-counter_inc');
+         elm.innerHTML = actual + 1;
+    },
+    resetslide = function() {
+      var elm = document.querySelector('.c-slider-item'),
+          newone = elm.cloneNode(true),
+          x = elm.parentNode.replaceChild(newone, elm);
+    },
+    resetInterval = function() {
+      clearInterval(autonext);
+      autonext = setInterval(function() {
+        slide++;
+        currentSlide();
+      }, 10000);
+    },
+    autonext = setInterval(function() {
+      next();
+    }, 10000);
+
+
+        currentSlide();
+
+    document.querySelector('.c-slider-arrow').addEventListener('click', function() {
+        next();
+    }, false);
+    // document.querySelector('#previous').addEventListener('click', function() {
+    //     prev();
+    // }, false);
 };
