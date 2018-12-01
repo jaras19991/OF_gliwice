@@ -18,7 +18,7 @@
   position: fixed;
   .c-main-logo {
     order: 1;    
-    margin-left: 10%;
+    padding: 0 10px;
     .o-main-logo{
       height: 70px;
     }
@@ -31,28 +31,36 @@
     .o-langs {
       display: flex;
       font-family: $font-primary-bold;
+      padding: 0 0 0 10px;
       li {
-        padding: 0 25px;
+        padding: 0 10px;
         font-family: $font-primary-light;
       }
       a{
-        font-size: rem(16px);
+        font-size: rem(12px);
       }
     }
   }
   .o-searchForm{
-    width: 90px;
+    width: 50px;
     order: 4;
     text-align: center;
     position: relative;
+    top: 4px;
+    right: 0px;
     #searchForm{
       height: 0px;
       display: none;
     }
     #searchWord {
+      display: none;
       width: 0px;
       background: none;
       border: none;
+    }
+    .icon-search {
+      right: 0px;
+      font-size: rem(20px);
     }
   }
   .c-main-menu{
@@ -64,7 +72,6 @@
     height: 90px;
     align-items: center;
     li {
-      font-size: rem(18px);
       text-align: center;
       display: flex;
       color: #a8a8a8;
@@ -79,8 +86,9 @@
         color: #fff;
       }
       a {
-        padding: 30px 20px;
+        padding: 30px 15px;
         font-family: $font-primary;
+        font-size: rem(16px);
       }
     }
     .sub-menu {
@@ -116,7 +124,7 @@
       }
     }
   }
-  // @media only screen and (max-width: 767px) {
+  // @media only screen and (max-width: 850px) {
   //   height: auto;
   //   padding-bottom: 0px;
   //   width: 100%;
@@ -320,41 +328,9 @@
   //     }
   //   }
   // }
-  @media only screen and (min-width: 768px) {
-    .c-main-logo{
-      margin-left: 30px;
-    }
-    .c-optional{
-      .o-langs{
-        li {
-          padding: 0 15px;
-        }
-        a {
-          font-size: rem(12px);
-        }
-      }
-    }
-    .c-main-menu li {
-      font-size: rem(14px);
-    }
-    .o-searchForm{
-      width: 60px;
-      top: 4px;
-      right: 0px;
-      .icon-search {
-        right: 0px;
-        font-size: rem(20px);
-      }
-      #searchWord {
-        display: none;
-      }
-    }
-    .c-main-menu{
-      .menu-item a {
-        padding: 30px 15px;
-        font-size: rem(18px);
-      }
-    }
+
+  @media only screen and (min-width: 851px){
+
   }
 }
 .o-helpers {
