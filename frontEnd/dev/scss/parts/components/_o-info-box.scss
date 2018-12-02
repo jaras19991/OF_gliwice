@@ -9,13 +9,6 @@
     line-height: 1.2;
     align-items: center;
     text-align: left;
-    @media only screen and (max-width: 1024px) {
-        &--large {
-            width: calc(100% + 15px);
-            margin: -15px 0 0 -15px;
-            padding: 20px 30px;
-        }
-    }
     &:before {
         content: "\e902";
         font-family: "icomoon";

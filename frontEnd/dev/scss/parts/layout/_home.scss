@@ -4,13 +4,13 @@
     }
     .content{
         background-color: #fff;
-        @media only screen and (min-width: 1025px) {
+        @media only screen and (min-width: 789px) {
             margin-top: -150px
         }
     }
     @media only screen and (min-width: 1025px) and (max-width: 1300px) {
         .c-index_horizontal .o-index_item img {
-        height: 100%;
+            height: 100%;
         }
     }
     @media only screen and (max-width: 850px){

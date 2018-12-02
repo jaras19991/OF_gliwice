@@ -17,7 +17,7 @@ input{
     height: 2px;
 }
 [class*=_back]:before{
-    content: " ";
+ //   content: " ";
     position: absolute;
     width: 1600px;
     height: 100%;
