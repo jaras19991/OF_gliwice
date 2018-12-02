@@ -8,6 +8,7 @@
   h3{
     font-family: $font-primary-light;
     display: contents;
+
   }
   .o-button{
     margin: 20px 20px 20px 0 !important;
@@ -23,6 +24,33 @@
   @media screen and (max-width: 767px){
     &.is_flex .flex_to_right{
       margin-left: initial;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1301px){
+  .c-index.c-index_calendar{
+    a{
+      .o-index_content{
+        padding: 10px;
+      }
+      h3{
+        line-height: 1.2;
+      }
+      .o-index_item {
+        display: flex;
+
+        picture{
+          flex: 1;
+          img{
+            height: 270px;
+          }
+        }
+        .o-index_content{
+          flex: 1;
+        }
+      }
     }
   }
 }
