@@ -1,11 +1,17 @@
 .c-slider {
     height: calc(100vh - 90px);
     background-color: #000;
-    margin-top: 90px;
     position: relative;
+    margin-top: 30px;
     @media only screen and (max-width: 850px) {
         margin-top: 70px;
         height: calc(100vh - 70px);
+    }
+    &-large{
+        margin-top: 90px;
+        @media only screen and (max-width: 850px) {
+            margin-top: 70px;
+        }
     }
     .c-slider-item {
         height: calc(100vh - 90px);
@@ -240,7 +246,7 @@
         @media only screen and (max-width: 767px) {
             margin-top: 0;
             width: 100vw;
-            margin-left: -15px;
+            margin-left: -30px;
         }
         .c-slider-item {
             height: auto;
@@ -262,6 +268,10 @@
             bottom: 50px;
             @media only screen and (max-width: 767px) {
                 left: 20px;
+                bottom: 100px;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                max-width: 50%;
                 bottom: 100px;
             }
         }

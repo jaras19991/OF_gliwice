@@ -39,7 +39,6 @@ input{
 .column_text_2 {
     column-count: 2;
     column-gap: 70px;
-    margin-bottom: 70px;
     @media screen and (max-width: 1024px){
         column-count: 1;
     }
@@ -100,4 +99,22 @@ input{
     .hide-pc{
         display: none;
     }
+}
+.loading{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+  &:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    border-color: #000 transparent #000 ;
+  }
+  &:hover:after {
+    animation: loading 1.2s linear infinite;
+  }
 }
