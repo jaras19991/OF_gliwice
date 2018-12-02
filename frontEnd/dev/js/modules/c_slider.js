@@ -3,6 +3,7 @@ export const c_slider = () => {
     slides = document.querySelectorAll('.c-slider-item'),
     numSlides = slides.length,
     counter_length = document.querySelector('.c-slider-counter_length');
+    if(!counter_length) return
          counter_length.innerHTML = numSlides;
 
     var currentSlide = function() {

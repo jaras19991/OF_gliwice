@@ -8,6 +8,7 @@ export const c_gradient = () => {
   Scroller.prototype = {
   init: function() {
       window.addEventListener('scroll', this.onScroll.bind(this), false);
+      this.onScroll.bind(this)
   },
   onScroll: function() {
       this.latestKnownScrollY = window.pageYOffset;

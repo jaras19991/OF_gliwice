@@ -14,23 +14,14 @@
     }
 }
 
-
-
-
-
-
-@media only screen and (max-width: 1880px) and (min-width: 1600px) {
-    .content, [class*=_back]:before {
+.content, [class*=_back]:before {
+    @media only screen and (max-width: 1880px) and (min-width: 1600px) {
         width: calc(100% - 280px)
     }
-}
-@media only screen and (max-width: 1599px) and (min-width: 850px) {
-    .content, [class*=_back]:before {
+    @media only screen and (max-width: 1599px) and (min-width: 850px) {
         width: calc(100% - 140px)
     }
-}
-@media only screen and (max-width: 849px) and (min-width: 789px) {
-    .content, [class*=_back]:before {
+    @media only screen and (max-width: 849px) and (min-width: 789px) {
         width: calc(100% - 140px)
     }
 }
