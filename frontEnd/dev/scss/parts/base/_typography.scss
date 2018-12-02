@@ -14,14 +14,16 @@ h4{
   font-size: rem(13px);
 }
 h1, h2, h3, h4{
-  // font-weight: 600;
   font-family: $font-primary-bold;
-//  font-family: $font-primary-semibold;
-  // text-transform: uppercase;
   color: $gray_dark;
   -webkit-text-stroke: 0.3px;
 }
-
+h1, h2{
+  font-family: $font-primary-bold;
+}
+h3, h4{
+  font-family: $font-primary;
+}
 .page-title{
   @include rem2(margin, 20px 0);
   @media screen and (min-width: 1024px) {

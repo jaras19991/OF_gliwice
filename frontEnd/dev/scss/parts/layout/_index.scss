@@ -255,14 +255,14 @@
     }
     .is-featured{
       img {
-        border: 6px solid $green;
+        border: 4px solid $green;
       }
       span.featured_text{
         background-color: $green; 
         position:  absolute;
         padding: 18px 20px 15px;
         color:  #fff;
-        font-family: $font-primary-bold;
+        font-family: $font-primary-light;
         font-size: rem(14px);
         top: 0px;
         left: 0px;
