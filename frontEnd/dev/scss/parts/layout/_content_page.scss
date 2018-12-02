@@ -137,6 +137,61 @@
         }
         .filterGroup li{
             margin: 10px 0;
+            label{
+                display: block;
+                position: relative;
+                padding: 6px 0 0 34px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                font-family: "Gotham-Book";
+                font-size: 0.875rem;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    &:checked ~ .checkmark:after {
+                        display: block;
+                    }
+                    &:checked ~ .checkmark {
+                        background-color: #333;
+                    }
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: rgb(248, 248, 248);
+                    border: 1px solid rgba(0, 0, 0, 0.151);
+                    border-radius: 2px;
+                    z-index: 10;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        left: 8px;
+                        top: 4px;
+                        width: 5px;
+                        height: 9px;
+                        border: solid white;
+                        border-width: 0 2px 2px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+                &:hover input ~ .checkmark {
+                    background-color: rgb(59, 59, 59);
+                    z-index: 2;
+                }
+            }
         }
     }
     
@@ -213,7 +268,7 @@
                     justify-content: center;
                     align-items: center;
                     img {
-                        height: 320px;
+                        // height: 320px;
                     }
                 }
                 p.date {

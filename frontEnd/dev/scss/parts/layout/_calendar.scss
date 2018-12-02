@@ -8,6 +8,7 @@
   h3{
     font-family: $font-primary-light;
     display: contents;
+
   }
   .o-button{
     margin: 20px 15px 20px 0 !important;
@@ -26,6 +27,33 @@
     }
     p{
       display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1301px){
+  .c-index.c-index_calendar{
+    a{
+      .o-index_content{
+        padding: 10px;
+      }
+      h3{
+        line-height: 1.2;
+      }
+      .o-index_item {
+        display: flex;
+
+        picture{
+          flex: 1;
+          img{
+            height: 270px;
+          }
+        }
+        .o-index_content{
+          flex: 1;
+        }
+      }
     }
   }
 }
